@@ -2677,3 +2677,45 @@ body.ivory-mode .ea-row input[type="email"] {
 }
 
 .channel-btn svg[fill="none"], .social-link svg[fill="none"] { fill: none !important; stroke: currentColor !important; }
+
+/* 6. Unify Project Connector Dot with SVG Branch Endpoint (Pixel-Exact Center Alignment) */
+.project-card::after {
+  display: none !important;
+  content: none !important;
+}
+.proj-connect-dot {
+  position: absolute !important;
+  top: 50% !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  border: 3px solid #060A14 !important;
+  box-shadow: 0 0 16px #60A5FA !important;
+  transform: translateY(-50%) !important;
+  z-index: 5 !important;
+  pointer-events: none !important;
+  display: block !important;
+}
+.project-card[data-curve-pos="1"] .proj-connect-dot {
+  inset-inline-end: -9px !important;
+  background: #60A5FA !important;
+  box-shadow: 0 0 16px #60A5FA !important;
+}
+.project-card[data-curve-pos="2"] .proj-connect-dot {
+  inset-inline-start: -9px !important;
+  background: #38BDF8 !important;
+  box-shadow: 0 0 16px #38BDF8 !important;
+}
+.project-card[data-curve-pos="3"] .proj-connect-dot {
+  inset-inline-end: -9px !important;
+  background: #2DD4BF !important;
+  box-shadow: 0 0 16px #2DD4BF !important;
+}
+.project-card.expanded .proj-connect-dot {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .proj-connect-dot {
+    display: none !important;
+  }
+}

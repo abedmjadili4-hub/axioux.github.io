@@ -263,6 +263,8 @@
     });
   }
 
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(() => setTimeout(alignProjectsCurve, 80)); }
+  if (typeof ResizeObserver !== "undefined") { const _st = document.querySelector(".projects-curved-stage"); if (_st) new ResizeObserver(() => alignProjectsCurve()).observe(_st); }
   function scheduleAlignProjectsCurve() {
     if (curveAlignRaf) return;
     curveAlignRaf = requestAnimationFrame(() => {
