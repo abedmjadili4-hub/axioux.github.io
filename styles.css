@@ -2517,3 +2517,163 @@
     .brand-sub { display: none; }
     .lang-btn, .mode-btn { padding: 6px 10px; font-size: 0.75rem; }
   }
+
+
+/* =========================================================================
+   PRODUCTION VISUAL FIXES (LinkedIn Icons, Project Cards, Early Access, Icons)
+   ========================================================================= */
+
+/* 1. Accessibility & Screen-Reader Only */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* 2. Fix Giant LinkedIn SVGs inside Leader & Member Cards */
+.leader-linkedin,
+.member-linkedin {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  width: 34px !important;
+  height: 34px !important;
+  padding: 0 !important;
+  margin: 8px 0 4px !important;
+  border-radius: 10px !important;
+  background: rgba(59, 130, 246, 0.14) !important;
+  border: 1px solid rgba(96, 165, 250, 0.35) !important;
+  color: var(--blue-light) !important;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease !important;
+}
+.leader-linkedin:hover,
+.member-linkedin:hover {
+  background: var(--blue) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+}
+.leader-linkedin svg,
+.member-linkedin svg {
+  width: 17px !important;
+  height: 17px !important;
+  max-width: 17px !important;
+  max-height: 17px !important;
+  display: block !important;
+  fill: currentColor !important;
+}
+body.ivory-mode .leader-linkedin,
+body.ivory-mode .member-linkedin {
+  background: rgba(37, 99, 235, 0.08) !important;
+  color: #1D4ED8 !important;
+  border-color: rgba(37, 99, 235, 0.28) !important;
+}
+
+/* 3. Ensure Curved Project Cards Are Always Visible (never stuck at opacity: 0) */
+.project-card {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* 4. Polished AT-Mind Early Access Band & Email Input */
+.early-access-section {
+  padding: 28px 0 44px !important;
+  position: relative;
+  z-index: 2;
+}
+.early-access-band {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(30, 58, 138, 0.36)) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  border-radius: var(--radius) !important;
+  padding: 36px 34px !important;
+  display: grid !important;
+  grid-template-columns: 1.15fr 1fr !important;
+  gap: 28px !important;
+  align-items: center !important;
+  text-align: start !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35) !important;
+}
+body.ivory-mode .early-access-band {
+  background: linear-gradient(135deg, #FFFFFF, #EFF6FF) !important;
+  border-color: rgba(37, 99, 235, 0.25) !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08) !important;
+}
+.ea-copy h2 {
+  font-family: var(--arabic-head) !important;
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem) !important;
+  font-weight: 800 !important;
+  margin: 8px 0 10px !important;
+  color: var(--text-main) !important;
+}
+.ea-copy p {
+  color: var(--text-muted) !important;
+  font-size: 0.96rem !important;
+  line-height: 1.75 !important;
+  margin: 0 !important;
+}
+.ea-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+.ea-row {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+}
+.ea-row input[type="email"] {
+  flex: 1 1 220px !important;
+  padding: 13px 16px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+  background: rgba(6, 10, 20, 0.8) !important;
+  color: #F8F7F3 !important;
+  font-family: var(--latin) !important;
+  font-size: 0.95rem !important;
+  min-height: 48px !important;
+}
+body.ivory-mode .ea-row input[type="email"] {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: rgba(15, 23, 42, 0.22) !important;
+}
+.ea-row input[type="email"]:focus {
+  outline: none !important;
+  border-color: var(--cyan) !important;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+}
+.ea-privacy {
+  font-size: 0.82rem !important;
+  color: var(--text-muted) !important;
+  margin: 2px 0 0 !important;
+}
+.ea-msg {
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  min-height: 1.2em;
+  color: var(--cyan) !important;
+}
+@media (max-width: 820px) {
+  .early-access-band {
+    grid-template-columns: 1fr !important;
+    padding: 26px 20px !important;
+  }
+}
+
+/* 5. Fix Direct Channel & Footer SVG Icon Sizing */
+.channel-btn svg,
+.social-link svg {
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0 !important;
+}
+
+.channel-btn svg[fill="none"], .social-link svg[fill="none"] { fill: none !important; stroke: currentColor !important; }
