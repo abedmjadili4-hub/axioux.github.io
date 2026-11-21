@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AXIOUX — The Art of Being Worthy | الصفحة الرئيسية</title>
+<meta name="description" id="metaDescription" content="AXIOUX مجتمع وفريق تقني يبني منصات الذكاء الاصطناعي والأنظمة السحابية، ويوثّق المعرفة الهندسية — لأن الجدارة بتنبني بالشغل.">
+<meta name="theme-color" content="#070B14">
+<link rel="canonical" id="canonicalLink" href="https://axioux.github.io/">
+<link rel="alternate" hreflang="en" href="https://axioux.github.io/en/">
+
+
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AXIOUX">
+<meta property="og:title" id="ogTitle" content="AXIOUX — The Art of Being Worthy">
+<meta property="og:description" id="ogDescription" content="مجتمع تقني يبني، يراجع، يوثّق، ويطوّر مشاريع عملية في الذكاء الاصطناعي والأنظمة السحابية.">
+<meta property="og:url" id="ogUrl" content="https://axioux.github.io/">
+<meta property="og:image" id="ogImage" content="https://axioux.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" id="twTitle" content="AXIOUX — The Art of Being Worthy">
+<meta name="twitter:description" id="twDescription" content="مجتمع تقني يبني منصات الذكاء الاصطناعي والأنظمة السحابية — الجدارة بتنبني بالشغل.">
+<meta name="twitter:image" id="twImage" content="https://axioux.github.io/assets/og.png">
+
+<!-- Inline SVG Favicon built from butterfly-wing X paths on #0F172A rounded square -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230F172A'/%3E%3Cpath d='M18 22 C38 22, 46 42, 50 50 C46 58, 38 78, 18 78 C32 66, 38 56, 44 50 C38 44, 32 34, 18 22 Z' fill='%23F8F7F3'/%3E%3Cpath d='M82 22 C62 22, 54 42, 50 50 C54 58, 62 78, 82 78 C68 66, 62 56, 56 50 C62 44, 68 34, 82 22 Z' fill='%233B82F6'/%3E%3Cpath d='M50 8 L53 23 L62 26 L53 29 L50 44 L47 29 L38 26 L47 23 Z' fill='%2360A5FA'/%3E%3C/svg%3E">
+
+<!-- JSON-LD Organization Structured Data -->
+<script type="application/ld+json" id="orgJsonLd">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AXIOUX",
+  "alternateName": "AXIOUX — The Art of Being Worthy",
+  "description": "Technology community and engineering team building AI platforms, cloud systems, and documented technical education.",
+  "url": "https://axioux.github.io/",
+  "logo": "https://axioux.github.io/assets/og.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gaza",
+    "addressCountry": "PS"
+  }
+}
+</script>
+
+<!-- Trimmed Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>#introSplash { display: none !important; }</style></noscript>
+<link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+<a href="#top" class="skip-link" data-i18n="skip_to_content">تخطي إلى المحتوى الرئيسي</a>
+
+<canvas id="starParticlesCanvas" aria-hidden="true"></canvas>
+
+<!-- ================= BUTTERFLY -> X -> SPLIT OPEN INTRO SPLASH ================= -->
+<div class="intro-splash" id="introSplash" aria-label="AXIOUX Intro Animation">
+  <div class="splash-gate-left" aria-hidden="true"></div>
+  <div class="splash-gate-right" aria-hidden="true"></div>
+
+  <div class="splash-stage" id="splashStage">
+    <div class="butterfly-x-wrap">
+      <svg class="splash-morph-svg" viewBox="0 0 200 200" fill="none">
+        <defs>
+          <linearGradient id="bf-left-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="65%" stop-color="#CBD5E1"/>
+            <stop offset="100%" stop-color="#334155"/>
+          </linearGradient>
+          <linearGradient id="bf-right-grad" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#93C5FD"/>
+            <stop offset="55%" stop-color="#3B82F6"/>
+            <stop offset="100%" stop-color="#1D4ED8"/>
+          </linearGradient>
+          <radialGradient id="core-flare" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+            <stop offset="45%" stop-color="#60A5FA" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <g class="bf-group">
+          <g class="bf-wing-l">
+            <path d="M100 102 C82 54, 24 28, 18 68 C14 94, 58 106, 100 105 Z" fill="url(#bf-left-grad)" opacity="0.95"/>
+            <path d="M100 106 C68 112, 28 134, 42 164 C54 184, 86 150, 100 110 Z" fill="url(#bf-left-grad)" opacity="0.82"/>
+          </g>
+          <g class="bf-wing-r">
+            <path d="M100 102 C118 54, 176 28, 182 68 C186 94, 142 106, 100 105 Z" fill="url(#bf-right-grad)" opacity="0.95"/>
+            <path d="M100 106 C132 112, 172 134, 158 164 C146 184, 114 150, 100 110 Z" fill="url(#bf-right-grad)" opacity="0.85"/>
+          </g>
+        </g>
+
+        <g class="x-emblem-group">
+          <path d="M 24 118 A 80 80 0 1 1 176 118" stroke="#60A5FA" stroke-width="2" opacity="0.8"/>
+          <path d="M28 42 C68 42, 88 84, 100 105 C88 126, 68 168, 28 168 C58 144, 74 122, 86 105 C74 88, 58 66, 28 42 Z" fill="url(#bf-left-grad)"/>
+          <path d="M172 42 C132 42, 112 84, 100 105 C112 126, 132 168, 172 168 C142 144, 126 122, 114 105 C126 88, 142 66, 172 42 Z" fill="url(#bf-right-grad)"/>
+          <circle cx="100" cy="105" r="24" fill="url(#core-flare)"/>
+          <path d="M100 76 L104 101 L129 105 L104 109 L100 134 L96 109 L71 105 L96 101 Z" fill="#FFFFFF"/>
+          <path d="M100 6 L105 32 L124 37 L105 42 L100 68 L95 42 L76 37 L95 32 Z" fill="#60A5FA"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="splash-wordmark">AXIOUX</div>
+    <div class="splash-tagline-en">THE ART OF BEING WORTHY</div>
+    <div class="splash-tagline-ar" id="splashSubAr" data-i18n="splash_sub">الجدارة مش ادّعاء، بتنبني بالشغل.</div>
+    <button type="button" class="splash-skip-btn" id="skipSplashBtn" data-i18n="btn_skip_splash">تخطي الموشن ✦</button>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="#top" class="brand-link">
+      <div class="brand-emblem-mini" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
+          <path d="M18 22 C38 22, 46 42, 50 50 C46 58, 38 78, 18 78 C32 66, 38 56, 44 50 C38 44, 32 34, 18 22 Z" fill="#F8F7F3"/>
+          <path d="M82 22 C62 22, 54 42, 50 50 C54 58, 62 78, 82 78 C68 66, 62 56, 56 50 C62 44, 68 34, 82 22 Z" fill="#3B82F6"/>
+          <path d="M50 8 L53 23 L62 26 L53 29 L50 44 L47 29 L38 26 L47 23 Z" fill="#60A5FA"/>
+        </svg>
+      </div>
+      <div class="brand-text-wrap">
+        <span class="brand-wordmark">AXIOUX</span>
+        <span class="brand-sub">THE ART OF BEING WORTHY</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" id="mainNav">
+      <a href="#projects" class="nav-link" data-i18n="nav_projects">مسار المشاريع</a>
+      <a href="#articles" class="nav-link" data-i18n="nav_articles">المقالات التقنية</a>
+      <a href="#courses" class="nav-link" data-i18n="nav_courses">الكورسات</a>
+      <a href="#team" class="nav-link" data-i18n="nav_team">الفريق</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">تواصل معنا</a>
+      <a href="about.html" class="nav-link" data-i18n="nav_about">من نحن</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button type="button" class="lang-btn" id="langToggleBtn" aria-label="التبديل إلى اللغة الإنجليزية">EN</button>
+      <button type="button" class="mode-btn" id="themeToggleBtn" data-i18n="btn_ivory_mode">☀️ الوضع الفاتح</button>
+      <button type="button" class="nav-toggle" id="mobileMenuBtn" aria-label="القائمة" aria-expanded="false" aria-controls="mainNav">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= SPACIOUS INTERACTIVE HERO SECTION ================= -->
+<main id="top">
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-pill">✦ AI &amp; CLOUD INNOVATION HOMEPAGE</div>
+
+      <svg class="hero-logo-svg" viewBox="0 0 760 195" role="img" aria-label="AXIOUX Logo">
+        <defs>
+          <linearGradient id="ax-blue" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#60A5FA"/>
+            <stop offset="55%" stop-color="#3B82F6"/>
+            <stop offset="100%" stop-color="#1D4ED8"/>
+          </linearGradient>
+        </defs>
+        <path d="M140 88 Q380 10 620 88" fill="none" stroke="url(#ax-blue)" stroke-width="2.2" opacity="0.85"/>
+        <path d="M380 6 L386 40 L416 46 L386 52 L380 86 L374 52 L344 46 L374 40 Z" fill="#60A5FA"/>
+        <text x="380" y="158" text-anchor="middle" fill="currentColor" font-family="'Cormorant Garamond', Georgia, serif" font-size="102" font-weight="700" letter-spacing="14">AXIOUX</text>
+        <path d="M405 106 L408 120 L420 123 L408 126 L405 140 L402 126 L390 123 L402 120 Z" fill="#3B82F6"/>
+      </svg>
+
+      <div class="hero-slogan-en">THE ART OF BEING WORTHY</div>
+
+      <h1 class="hero-title-ar" data-i18n-html="hero_title">نحوّل الأفكار التقنية إلى <span>منصات ذكية وأثر ملموس.</span></h1>
+      <p class="hero-lead" data-i18n="hero_lead">
+        فريق ومجتمع هندسي يصمّم ويطوّر حلول الذكاء الاصطناعي والمنصات السحابية بانضباط وإبداع — تصفّح مسار مشاريعنا ومقالات فريقنا أدناه.
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="#early-access" class="btn btn-primary" data-i18n="hero_cta_interest">سجّل اهتمامك بـ AT-Mind ✦</a>
+        <a href="#projects" class="btn btn-outline" data-i18n="hero_cta_secondary">شوف المشاريع ▾</a>
+      </div>
+
+      <!-- Compact Interactive Butterfly Wings Merger -->
+      <div class="wings-mini-interactive" id="equationBox">
+        <div class="wings-stage" id="wingsStage">
+          <div class="wing-circle wing-discipline" id="wingDiscipline">
+            <span data-i18n="wing_disc">انضباط</span>
+            <!-- <small style="font-family: var(--latin); font-size: 0.68rem; color: #94A3B8;">#0F172A</small> -->
+          </div>
+          <div class="wing-circle wing-creativity" id="wingCreativity">
+            <span data-i18n="wing_creat">إبداع</span>
+            <!-- <small style="font-family: var(--latin); font-size: 0.68rem; color: #DBEAFE;">#3B82F6</small> -->
+          </div>
+          <div class="spark-center">
+            <svg width="96" height="96" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="40" fill="none" stroke="rgba(147, 197, 253, 0.35)" stroke-width="1.2" stroke-dasharray="4 4"/>
+              <path d="M60 6 L67 49 L110 60 L67 71 L60 114 L53 71 L10 60 L53 49 Z" fill="#60A5FA"/>
+              <path d="M60 22 L64 53 L95 60 L64 67 L60 98 L56 67 L25 60 L56 53 Z" fill="#F8F7F3"/>
+            </svg>
+          </div>
+        </div>
+        <p id="equationStatusText" style="font-family: var(--arabic-head); font-weight: 800; font-size: 1rem; color: #93C5FD;">
+          انضباط + إبداع = ؟
+        </p>
+        <button type="button" class="btn btn-outline" id="mergeWingsBtn" style="padding: 8px 20px; font-size: 0.84rem;" data-i18n="btn_merge_wings">ادمج الجناحين الآن ✦</button>
+      </div>
+
+      <!-- Real Credibility Stats Strip -->
+      <div class="credibility-stats-strip" id="credibilityStats" aria-label="إحصائيات الفريق والمشاريع">
+        <div class="stat-item">
+          <span class="stat-num" id="statMembersCount">8</span>
+          <span class="stat-lbl" data-i18n="stat_members_lbl">أعضاء في الفريق الأساسي</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="statProjectsCount">3</span>
+          <span class="stat-lbl" data-i18n="stat_projects_lbl">منصات ومشاريع مصنفة</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="statArticlesCount">3</span>
+          <span class="stat-lbl" data-i18n="stat_articles_lbl">مقالات تقنية منشورة</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AT-MIND EARLY ACCESS ================= -->
+  <section id="early-access" class="early-access-section" aria-labelledby="eaTitle">
+    <div class="container">
+      <div class="early-access-band">
+        <div class="ea-copy">
+          <span class="eyebrow">EARLY ACCESS · AT-MIND</span>
+          <h2 id="eaTitle" data-i18n="ea_title">كن أول من يجرّب AT-Mind</h2>
+          <p data-i18n="ea_desc">منصة وكلاء ذكاء اصطناعي قيد التطوير. سجّل بريدك، ونرسل لك أول دعوة للتجربة قبل الإطلاق العام.</p>
+        </div>
+        <form id="waitlistForm" class="ea-form" novalidate>
+          <input type="checkbox" name="botcheck" id="eaBotcheck" style="display:none !important;" tabindex="-1" autocomplete="off">
+          <label class="sr-only" for="eaEmail" data-i18n="ea_email_label">البريد الإلكتروني</label>
+          <div class="ea-row">
+            <input id="eaEmail" name="email" type="email" required placeholder="name@example.com" autocomplete="email" dir="ltr">
+            <button type="submit" class="btn btn-primary" data-i18n="ea_btn">سجّل اهتمامك ✦</button>
+          </div>
+          <p class="ea-privacy" data-i18n="ea_privacy">بريدك يُستخدم لإرسال دعوة التجربة فقط. لا رسائل تسويقية.</p>
+          <div class="ea-msg" id="waitlistMsg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CURVED SCROLL PATH PROJECTS SECTION ================= -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">CURVED PROJECT PATH · مسار المشاريع</span>
+        <h2 data-i18n="proj_heading">المشاريع القادمة والحالية على مسار الابتكار</h2>
+        <p data-i18n="proj_sub">بطاقات مختصرة ومصنّفة حسب المجال التقني، موزّعة على مسار منحني تفاعلي — اضغط «اعرف المزيد» على أي مشروع لاستعراض التفاصيل والمحاكاة.</p>
+      </div>
+
+      <div class="board-toolbar">
+        <div class="filter-bar">
+          <button type="button" class="filter-btn active" data-filter="upcoming" data-i18n="filter_upcoming">مشاريع قادمة (٣)</button>
+          <button type="button" class="filter-btn" data-filter="current" data-i18n="filter_current">المشاريع الحالية</button>
+          <button type="button" class="filter-btn" data-filter="all" data-i18n="filter_all">عرض الكل</button>
+          <button type="button" class="filter-btn" data-filter="ai" data-i18n="filter_ai">ذكاء اصطناعي (AI)</button>
+          <button type="button" class="filter-btn" data-filter="cloud" data-i18n="filter_cloud">سحابة وتجارة (Cloud)</button>
+          <button type="button" class="filter-btn" data-filter="health" data-i18n="filter_health">صحة رقمية وAI</button>
+        </div>
+
+        <button type="button" class="btn btn-primary admin-only" id="toggleAddDrawerBtn" data-i18n="btn_add_proj">+ أضف مشروعاً جديداً</button>
+      </div>
+
+      <div class="add-project-drawer" id="addProjectDrawer">
+        <h3 style="font-family: var(--arabic-head); font-size: 1.25rem; margin-bottom: 14px;" data-i18n="drawer_title">إضافة مشروع جديد</h3>
+        <form id="newProjectForm">
+          <div class="drawer-grid">
+            <div class="form-field">
+              <label for="projTitle" data-i18n="lbl_proj_title">اسم المشروع</label>
+              <input id="projTitle" type="text" required placeholder="مثال: منصة التعلم الذكي...">
+            </div>
+            <div class="form-field">
+              <label for="projType" data-i18n="lbl_proj_type">حالة المشروع</label>
+              <select id="projType">
+                <option value="current" data-i18n="opt_type_current">مشروع حالي ملموس</option>
+                <option value="upcoming" data-i18n="opt_type_upcoming">مشروع قادم</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="projStatus" data-i18n="lbl_proj_status">التصنيف التقني</label>
+              <input id="projStatus" type="text" required placeholder="مثال: ذكاء اصطناعي (AI)">
+            </div>
+            <div class="form-field">
+              <label for="projTags" data-i18n="lbl_proj_tags">التقنيات (مفصولة بفاصلة)</label>
+              <input id="projTags" type="text" required placeholder="Python, WebAssembly, AI">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="projDesc" data-i18n="lbl_proj_desc">نبذة قصيرة</label>
+            <textarea id="projDesc" rows="2" required placeholder="نبذة مختصرة جداً عن المشروع..."></textarea>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button type="submit" class="btn btn-primary" data-i18n="btn_save_proj">حفظ وإضافة ✦</button>
+            <button type="button" class="btn btn-outline" id="cancelAddDrawerBtn" data-i18n="btn_cancel">إلغاء</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Curved Path Stage -->
+      <div class="projects-curved-stage">
+        <svg class="curved-path-svg" id="projectsCurveSvg" viewBox="0 0 1000 1100" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="curveGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.25"/>
+              <stop offset="20%" stop-color="#3B82F6" stop-opacity="1"/>
+              <stop offset="55%" stop-color="#38BDF8" stop-opacity="1"/>
+              <stop offset="85%" stop-color="#2DD4BF" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#60A5FA" stop-opacity="0.25"/>
+            </linearGradient>
+          </defs>
+
+          <path class="curve-ribbon-bg" d="M 500 0 C 200 110, 200 290, 500 410 C 800 530, 800 710, 500 830 C 220 930, 350 1040, 500 1100"/>
+          <path id="mainCurvePath" class="curve-core-solid" d="M 500 0 C 200 110, 200 290, 500 410 C 800 530, 800 710, 500 830 C 220 930, 350 1040, 500 1100"/>
+          <path class="curve-glow-line" d="M 500 0 C 200 110, 200 290, 500 410 C 800 530, 800 710, 500 830 C 220 930, 350 1040, 500 1100"/>
+
+          <path class="curve-branch-line" data-branch="1" d="M 287 201 Q 470 201 640 201"/>
+          <path class="curve-branch-line" data-branch="2" d="M 713 620 Q 530 620 360 620"/>
+          <path class="curve-branch-line" data-branch="3" d="M 351 980 Q 470 980 640 980"/>
+
+          <g style="color: #60A5FA;">
+            <circle class="curve-node-pulse" cx="275" cy="201" r="16" stroke="#60A5FA"/>
+            <circle class="curve-node-ring" cx="275" cy="201" r="12" stroke="#60A5FA"/>
+            <text x="275" y="174" text-anchor="middle" fill="#93C5FD" font-family="Inter, sans-serif" font-size="13" font-weight="800">01 · AI</text>
+          </g>
+
+          <g style="color: #38BDF8;">
+            <circle class="curve-node-pulse" cx="725" cy="620" r="16" stroke="#38BDF8"/>
+            <circle class="curve-node-ring" cx="725" cy="620" r="12" stroke="#38BDF8"/>
+            <text x="725" y="593" text-anchor="middle" fill="#7DD3FC" font-family="Inter, sans-serif" font-size="13" font-weight="800">02 · CLOUD</text>
+          </g>
+
+          <g style="color: #2DD4BF;">
+            <circle class="curve-node-pulse" cx="339" cy="980" r="16" stroke="#2DD4BF"/>
+            <circle class="curve-node-ring" cx="339" cy="980" r="12" stroke="#2DD4BF"/>
+            <text x="339" y="953" text-anchor="middle" fill="#5EEAD4" font-family="Inter, sans-serif" font-size="13" font-weight="800">03 · HEALTH AI</text>
+          </g>
+
+          <g id="curveTravelerStar" transform="translate(500, 0)">
+            <circle cx="0" cy="0" r="16" fill="rgba(96, 165, 250, 0.28)"/>
+            <path d="M0 -14 L3.5 -3.5 L14 0 L3.5 3.5 L0 14 L-3.5 3.5 L-14 0 L-3.5 -3.5 Z" fill="#FFFFFF"/>
+          </g>
+        </svg>
+
+        <div class="projects-curved-track" id="projectsGrid">
+          <div class="current-slot-card" id="currentProjectsPlaceholder">
+            <span class="proj-status-tag">CURRENT TANGIBLE PROJECTS · المشاريع الحالية</span>
+            <h3 data-i18n="curr_slot_title">خانة المشاريع الحالية والمنجزة</h3>
+            <p data-i18n="curr_slot_desc" style="max-width: 580px; color: var(--text-muted);">هذه المساحة مخصصة للمشاريع الملموسة التي يُنهي فريق AXIOUX بناءها وإطلاقها فعلياً. نعمل حالياً على تطوير أولى منصاتنا من قائمة المشاريع القادمة.</p>
+            <button type="button" class="btn btn-primary admin-only" id="addFirstCurrentProjBtn" data-i18n="btn_add_first_current">+ إدراج أول مشروع حالي ملموس</button>
+          </div>
+
+          <!-- Project Card 1: AI & EdTech -->
+          <article class="project-card" data-category="upcoming" data-domain="ai" data-curve-pos="1" data-proj-id="p1">
+            <span class="curve-waypoint-badge">NODE 01 · AI &amp; EDTECH</span>
+            <span class="proj-connect-dot" aria-hidden="true"></span>
+            <div class="proj-meta-top">
+              <div class="proj-cat-wrap">
+                <span class="cat-anim-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2Z"/></svg>
+                </span>
+                <span class="proj-domain-pill" data-i18n="p1_domain">تصنيف: ذكاء اصطناعي وتقنيات تعليم</span>
+              </div>
+              <span class="proj-status-tag" data-i18n="badge_upcoming">مشروع قادم</span>
+            </div>
+
+            <h3 data-i18n="p1_title">منصة التعلم والتصحيح البرمجي الذكي</h3>
+            <p class="proj-short-summary" data-i18n="p1_summary">بيئة تفاعلية لتنفيذ أكواد Python وC++ مباشرة في المتصفح مع مساعد ذكي يوجه الطالب خطوة بخطوة.</p>
+
+            <div class="proj-specs-box">
+              <div>
+                <h4 data-i18n="p1_ov_title">نظرة عامة على المشروع</h4>
+                <p data-i18n="p1_ov_desc" style="font-size:0.88rem; color:var(--text-muted);">بيئة متكاملة تتيح للمتعلمين كتابة وتنفيذ الأكواد البرمجية مباشرة داخل المتصفح عبر WebAssembly دون الحاجة لتثبيت أي بيئات عمل محلية.</p>
+              </div>
+              <div>
+                <h4 data-i18n="p1_feat_title">أهم المزايا والخصائص:</h4>
+                <ul class="proj-feature-list">
+                  <li data-i18n-html="p1_f1"><strong>محرر أكواد مدمج وسريع:</strong> يدعم لغات متعددة مع التلوين البرمجي والإكمال التلقائي.</li>
+                  <li data-i18n-html="p1_f2"><strong>نظام تصحيح وتقييم آلي:</strong> فحص مخرجات الكود مقابل حالات اختبار متنوعة (Test Cases) فورياً.</li>
+                  <li data-i18n-html="p1_f3"><strong>مساعد ذكي توجيهي (Smart AI Guide):</strong> يحلل الأخطاء المنطقية ويرشد الطالب تدريجياً للحل دون إعطائه الإجابة المباشرة.</li>
+                  <li data-i18n-html="p1_f4"><strong>مسارات تعلم متدرجة:</strong> تحديات برمجية مقسمة من المبتدئ إلى الاحترافي.</li>
+                </ul>
+              </div>
+              <div class="proj-impact-box" data-i18n-html="p1_req_box">
+                <strong>المتطلبات والتقنيات:</strong> Python Engine, WebAssembly (Wasm), Large Language Models (LLM API), Node.js, WebSockets.
+              </div>
+              <ul class="tech-stack-tags">
+                <li>Python</li>
+                <li>C++</li>
+                <li>WebAssembly</li>
+                <li>AI / LLMs</li>
+                <li>Node.js</li>
+              </ul>
+              <div class="proj-sim-wrap" onclick="event.stopPropagation()">
+                <div class="proj-sim-header">
+                  <span class="proj-sim-badge">AI MENTOR DEMO · محاكاة تفاعلية</span>
+                  <button type="button" class="btn-run-sim" data-sim-btn="p1" data-i18n="sim_p1_btn">▶ جرّب المساعد الذكي</button>
+                </div>
+                <div class="proj-sim-output" id="simOut_p1" data-i18n-html="sim_p1_out">
+                  <strong>✕ فحص الكود (Test #2):</strong> المخرج المتوقع <code>12</code>، الفعلي <code>9</code>.<br>
+                  <strong>💡 تلميح المساعد الذكي:</strong> راجع شرط باقي القسمة <code>n % 2 == 1</code> لاختيار الأعداد الزوجية فقط.
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:4px;">
+              <button type="button" class="btn-read-more open-proj-modal-btn" data-proj="p1" aria-expanded="false" data-i18n="btn_view_full_proj">اعرف المزيد ▾</button>
+              <div class="proj-ext-links" data-proj-links="p1" style="display:inline-flex; gap:8px;"></div>
+            </div>
+          </article>
+
+          <!-- Project Card 2: Cloud & E-Commerce -->
+          <article class="project-card" data-category="upcoming" data-domain="cloud" data-curve-pos="2" data-proj-id="p2">
+            <span class="curve-waypoint-badge">NODE 02 · CLOUD &amp; WEB</span>
+            <span class="proj-connect-dot" aria-hidden="true"></span>
+            <div class="proj-meta-top">
+              <div class="proj-cat-wrap">
+                <span class="cat-anim-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                </span>
+                <span class="proj-domain-pill" data-i18n="p2_domain">تصنيف: حوسبة سحابية وتجارة</span>
+              </div>
+              <span class="proj-status-tag" data-i18n="badge_upcoming">مشروع قادم</span>
+            </div>
+
+            <h3 data-i18n="p2_title">منصة دعم المتاجر والمشاريع الصغيرة</h3>
+            <p class="proj-short-summary" data-i18n="p2_summary">منصة سحابية موحدة تمنح المتاجر الناشئة واجهات بيع احترافية وتحليلات ذكية خلال دقائق.</p>
+
+            <div class="proj-specs-box">
+              <div>
+                <h4 data-i18n="p2_ov_title">فكرة وأهداف المنصة</h4>
+                <p data-i18n="p2_ov_desc" style="font-size:0.88rem; color:var(--text-muted);">دعم رواد الأعمال وأصحاب المشاريع الصغيرة بصفحات متجر احترافية دون تكاليف بناء مواقع مستقلة.</p>
+              </div>
+              <div>
+                <h4 data-i18n="p2_feat_title">المميزات الرئيسية:</h4>
+                <ul class="proj-feature-list">
+                  <li data-i18n-html="p2_f1"><strong>إنشاء متجر فوري:</strong> لوحة تحكم سهلة لرفع المنتجات وتحديد الأسعار خلال دقائق.</li>
+                  <li data-i18n-html="p2_f2"><strong>تصفح مركزي ذكي:</strong> البحث عن المنتجات والخدمات المحلية جغرافياً وحسب التصنيف.</li>
+                  <li data-i18n-html="p2_f3"><strong>باقات تسويقية ذكية:</strong> إبراز المتجر وإحصائيات تحليلية لحركة المبيعات.</li>
+                  <li data-i18n-html="p2_f4"><strong>منظومة تواصل ودفع مباشرة:</strong> ربط الزبائن بالمتجر عبر قنوات تواصل ودفع سريعة.</li>
+                </ul>
+              </div>
+              <div class="proj-impact-box" data-i18n-html="p2_impact_box">
+                <strong>الأثر الاقتصادي:</strong> تخفيض التكاليف التشغيلية على المشاريع الناشئة ومساعدتها على الانتشار الرقمي المستدام.
+              </div>
+              <ul class="tech-stack-tags">
+                <li>Full-Stack Web</li>
+                <li>Cloud Database</li>
+                <li>Payment Gateway</li>
+                <li>Analytics Engine</li>
+                <li>RESTful APIs</li>
+              </ul>
+              <div class="proj-sim-wrap" onclick="event.stopPropagation()">
+                <div class="proj-sim-header">
+                  <span class="proj-sim-badge">STOREFRONT DEMO · معاينة المتجر</span>
+                  <button type="button" class="btn-run-sim" data-sim-btn="p2" data-i18n="sim_p2_btn">🛍️ معاينة لوحة المتجر</button>
+                </div>
+                <div class="proj-sim-output" id="simOut_p2" data-i18n-html="sim_p2_out">
+                  <strong>🏪 متجر "أثر" المحلي:</strong> ٢٤ منتجاً نشطاً · <strong>+٤٢٪ نمو في الطلبات الجغرافية القريبة</strong>.
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:4px;">
+              <button type="button" class="btn-read-more open-proj-modal-btn" data-proj="p2" aria-expanded="false" data-i18n="btn_view_full_proj">اعرف المزيد ▾</button>
+              <div class="proj-ext-links" data-proj-links="p2" style="display:inline-flex; gap:8px;"></div>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Digital Health & AI -->
+          <article class="project-card" data-category="upcoming" data-domain="health" data-curve-pos="3" data-proj-id="p3">
+            <span class="curve-waypoint-badge">NODE 03 · DIGITAL HEALTH &amp; AI</span>
+            <span class="proj-connect-dot" aria-hidden="true"></span>
+            <div class="proj-meta-top">
+              <div class="proj-cat-wrap">
+                <span class="cat-anim-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </span>
+                <span class="proj-domain-pill" data-i18n="p3_domain">تصنيف: ذكاء اصطناعي وصحة رقمية</span>
+              </div>
+              <span class="proj-status-tag" data-i18n="badge_upcoming">مشروع قادم</span>
+            </div>
+
+            <h3 data-i18n="p3_title">منصة "شَـفـاء" لإدارة الرعاية والفرز الصحي الذكي</h3>
+            <p class="proj-short-summary" data-i18n="p3_summary">منظومة صحية ذكية تربط المستشفيات بفرز طبي بالذكاء الاصطناعي وسجل طبي موحد وتأهيل رقمي.</p>
+
+            <div class="proj-specs-box">
+              <div>
+                <h4 data-i18n="p3_ov_title">رؤية مشروع شَـفـاء</h4>
+                <p data-i18n="p3_ov_desc" style="font-size:0.88rem; color:var(--text-muted);">إعادة تنظيم المنظومة الطبية في أوقات الأزمات والضغط الشديد وتخفيف العبء عن الكوادر الطبية.</p>
+              </div>
+              <div>
+                <h4 data-i18n="p3_feat_title">أهم محاور المنصة:</h4>
+                <ul class="proj-feature-list">
+                  <li data-i18n-html="p3_f1"><strong>نظام الفرز الطبي الذكي (AI Clinical Triage):</strong> تحليل الأعراض صوتياً أو نصياً وتوجيه المريض لأقرب طوارئ.</li>
+                  <li data-i18n-html="p3_f2"><strong>تبويبات المستشفيات والأطباء الموحدة:</strong> استعراض المواعيد والأقسام الشاغرة وتوزيع الضغط.</li>
+                  <li data-i18n-html="p3_f3"><strong>السجل الطبي الموحد (Unified EHR):</strong> ملف صحي مشفر يتيح قراءة التاريخ المرضي فورياً.</li>
+                  <li data-i18n-html="p3_f4"><strong>التأهيل والعلاج الطبيعي الرقمي:</strong> برامج تمارين منزلية مخصصة للمصابين دون عناء التنقل.</li>
+                  <li data-i18n-html="p3_f5"><strong>لوحة إدارة الأزمات وتنبيهات SMS:</strong> توجيه الحالات للمشافي الأقل ازدحاماً ودعم العمل عند انقطاع الإنترنت.</li>
+                  <li data-i18n-html="p3_f6"><strong>مساعد صوتي باللهجة المحلية:</strong> لتسهيل الاستخدام لكبار السن والمصابين.</li>
+                </ul>
+              </div>
+              <div class="proj-impact-box" data-i18n-html="p3_impact_box">
+                <strong>الأثر الحيوي:</strong> تقليل التدافع، التوزيع العادل للموارد الطبية، وتوثيق البيانات الصحية لإنقاذ الأرواح.
+              </div>
+              <ul class="tech-stack-tags">
+                <li>AI NLP &amp; Dialect Models</li>
+                <li>Distributed Databases</li>
+                <li>HIPAA Security</li>
+                <li>Telehealth WebRTC</li>
+                <li>SMS Gateway API</li>
+              </ul>
+              <div class="proj-sim-wrap" onclick="event.stopPropagation()">
+                <div class="proj-sim-header">
+                  <span class="proj-sim-badge">AI CLINICAL TRIAGE DEMO · محاكاة الفرز</span>
+                  <button type="button" class="btn-run-sim" data-sim-btn="p3" data-i18n="sim_p3_btn">🩺 جرّب محاكاة الفرز الطبي</button>
+                </div>
+                <div class="proj-sim-output" id="simOut_p3" data-i18n-html="sim_p3_out">
+                  <strong>🎙️ إدخال صوتي باللهجة المحلية:</strong> «والدي عنده ضيقة نفس شديدة وألم بالصدر».<br>
+                  <strong>🚨 قرار الفرز الذكي:</strong> أولوية قصوى (<strong>Code Red</strong>) · توجيه لأقرب طوارئ متاحة + تنبيه <strong>SMS</strong> فوري.
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:4px;">
+              <button type="button" class="btn-read-more open-proj-modal-btn" data-proj="p3" aria-expanded="false" data-i18n="btn_view_full_proj">اعرف المزيد ▾</button>
+              <div class="proj-ext-links" data-proj-links="p3" style="display:inline-flex; gap:8px;"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECH ARTICLES & INSIGHTS SECTION ================= -->
+  <section id="articles">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">AXIOUX TECH JOURNAL · مدونة الفريق</span>
+        <h2 data-i18n="art_heading">مقالات وتجارب فريق AXIOUX</h2>
+        <p data-i18n="art_sub">مقالات تقنية يكتبها أعضاء الفريق حول هندسة الذكاء الاصطناعي، المعمارية البرمجية، وأساسيات علوم الحاسوب.</p>
+      </div>
+
+      <div class="board-toolbar">
+        <div class="filter-bar">
+          <button type="button" class="filter-btn art-filter-btn active" data-art-filter="all" data-i18n="art_filter_all">كل المقالات</button>
+          <button type="button" class="filter-btn art-filter-btn" data-art-filter="ai" data-i18n="art_filter_ai">ذكاء اصطناعي ومنطق</button>
+          <button type="button" class="filter-btn art-filter-btn" data-art-filter="systems" data-i18n="art_filter_sys">معمارية وأنظمة</button>
+          <button type="button" class="filter-btn art-filter-btn" data-art-filter="culture" data-i18n="art_filter_cult">علوم الحاسوب</button>
+        </div>
+
+        <button type="button" class="btn btn-primary admin-only" id="toggleAddArticleBtn" data-i18n="btn_add_article">+ نشر مقال تقني جديد</button>
+      </div>
+
+      <div class="add-project-drawer" id="addArticleDrawer">
+        <h3 style="font-family: var(--arabic-head); font-size: 1.25rem; margin-bottom: 14px;" data-i18n="art_drawer_title">إضافة مقال تقني جديد</h3>
+        <form id="newArticleForm">
+          <div class="drawer-grid">
+            <div class="form-field">
+              <label for="artTitle" data-i18n="lbl_art_title">عنوان المقال</label>
+              <input id="artTitle" type="text" required placeholder="عنوان المقال...">
+            </div>
+            <div class="form-field">
+              <label for="artCategory" data-i18n="lbl_art_cat">تصنيف المقال</label>
+              <select id="artCategory">
+                <option value="ai" data-i18n="opt_art_ai">ذكاء اصطناعي ومنطق</option>
+                <option value="systems" data-i18n="opt_art_sys">معمارية وأنظمة</option>
+                <option value="culture" data-i18n="opt_art_cult">علوم الحاسوب</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="artAuthor" data-i18n="lbl_art_author">اسم الكاتب</label>
+              <input id="artAuthor" type="text" required placeholder="اسم العضو...">
+            </div>
+            <div class="form-field">
+              <label for="artReadTime" data-i18n="lbl_art_time">وقت القراءة</label>
+              <input id="artReadTime" type="text" required placeholder="٤ دقائق قراءة">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="artSummary" data-i18n="lbl_art_summary">نبذة مختصرة</label>
+            <textarea id="artSummary" rows="2" required placeholder="ملخص قصير..."></textarea>
+          </div>
+          <div class="form-field">
+            <label for="artBody" data-i18n="lbl_art_body">النص الكامل للمقال</label>
+            <textarea id="artBody" rows="4" required placeholder="النص الكامل..."></textarea>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button type="submit" class="btn btn-primary" data-i18n="btn_save_article">نشر المقال ✦</button>
+            <button type="button" class="btn btn-outline" id="cancelAddArticleBtn" data-i18n="btn_cancel">إلغاء</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="articles-grid" id="articlesGrid">
+        <!-- Article 1: Jenan -->
+        <article class="article-card" data-art-cat="ai">
+          <div>
+            <div class="article-meta">
+              <span class="article-cat-badge" data-i18n="art1_badge">هندسة الذكاء الاصطناعي والمنطق</span>
+              <span class="article-read-time" data-i18n="art1_time">بقلم: جنان الرَّحمَٰن الجمّال · ٤ دقائق</span>
+            </div>
+            <h3 data-i18n="art1_title">من برمجة إلى تفكير هندسي: المنطق الرياضي والـ Problem Solving</h3>
+            <p data-i18n="art1_excerpt">لماذا الـ AI ليس سحراً بل رياضيات ومنطق، وكيف يشكّل التحليل المنطقي 80% من بناء أي نظام ذكي قبل كتابة الكود.</p>
+            <div class="article-inline-body" data-art-drawer="a1"></div>
+          </div>
+          <div class="article-author-row">
+            <div class="article-author-info">
+              <span data-i18n="art1_author">جنان الرَّحمَٰن الجمّال · مهندسة ذكاء اصطناعي</span>
+              <span>AI Logic · Problem Solving</span>
+            </div>
+            <button type="button" class="btn-read-more open-art-modal-btn" data-art="a1" aria-expanded="false" data-i18n="btn_read_article">اعرف المزيد ▾</button>
+          </div>
+        </article>
+
+        <!-- Article 2: Nourhan Talal Hassouna -->
+        <article class="article-card" data-art-cat="systems">
+          <div>
+            <div class="article-meta">
+              <span class="article-cat-badge" data-i18n="art2_badge">الرؤية التقنية وهندسة الأنظمة</span>
+              <span class="article-read-time" data-i18n="art2_time">بقلم: نورهان طلال حسونة (CTO) · ٣ دقائق</span>
+            </div>
+            <h3 data-i18n="art2_title">بناء أنظمة ذكية تثبت جدارتها عبر الزمن: الرؤية التقنية في AXIOUX</h3>
+            <p data-i18n="art2_excerpt">كيف نحول التحديات المعقدة إلى منتجات رقمية قابلة للتوسع وعالية الموثوقية تعكس فلسفة The Art of Being Worthy.</p>
+            <div class="article-inline-body" data-art-drawer="a2"></div>
+          </div>
+          <div class="article-author-row">
+            <div class="article-author-info">
+              <span data-i18n="art2_author">نورهان طلال حسونة · CTO &amp; AI Engineer</span>
+              <span>System Architecture · Code Quality</span>
+            </div>
+            <button type="button" class="btn-read-more open-art-modal-btn" data-art="a2" aria-expanded="false" data-i18n="btn_read_article">اعرف المزيد ▾</button>
+          </div>
+        </article>
+
+        <!-- Article 3: Abdelrahman -->
+        <article class="article-card" data-art-cat="culture">
+          <div>
+            <div class="article-meta">
+              <span class="article-cat-badge" data-i18n="art3_badge">علوم الحاسوب والتفكير الحاسوبي</span>
+              <span class="article-read-time" data-i18n="art3_time">بقلم: عبدالرَّحمَٰن الجديلي · ٤ دقائق</span>
+            </div>
+            <h3 data-i18n="art3_title">لماذا يجب أن نتعلم علوم الحاسوب قبل التعمق في لغات البرمجة؟</h3>
+            <p data-i18n="art3_excerpt">المبرمج المتميز ليس من يعرف أكبر عدد من اللغات، بل من يستطيع التفكير بطريقة صحيحة وتحويل المشكلات إلى حلول فعّالة.</p>
+            <div class="article-inline-body" data-art-drawer="a3"></div>
+          </div>
+          <div class="article-author-row">
+            <div class="article-author-info">
+              <span data-i18n="art3_author">عبدالرَّحمَٰن الجديلي · مهندس برمجيات وواجهات</span>
+              <span>Computer Science · C++ &amp; Python</span>
+            </div>
+            <button type="button" class="btn-read-more open-art-modal-btn" data-art="a3" aria-expanded="false" data-i18n="btn_read_article">اعرف المزيد ▾</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COURSES & TRAINING SECTION ================= -->
+  <section id="courses">
+    <div class="container">
+      <div id="coursesDynamicContainer">
+        <div class="coming-soon-banner">
+          <div style="max-width: 620px;">
+            <span class="eyebrow" data-i18n="courses_soon_badge">COURSES &amp; TRAINING · قريباً</span>
+            <h3 style="font-family: var(--arabic-head); font-size: 1.45rem; margin: 4px 0 8px;" data-i18n="courses_soon_title">المسارات التدريبية التطبيقية — قريباً</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="courses_soon_desc">نعدّ حالياً مسارات تدريبية عملية مبنية على مشاريعنا الهندسية. سجّل اهتمامك المسبق أو انضم كمدرب أو شريك معنا.</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <button type="button" class="btn btn-primary preselect-contact-btn" data-inquiry="partnership" data-i18n="btn_course_interest">سجّل اهتمامك أو اطلب شراكة</button>
+            <button type="button" class="btn btn-outline preselect-contact-btn" data-inquiry="trainer" data-i18n="btn_become_trainer">انضم كمدرب معنا</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TEAM & LEADERSHIP ================= -->
+  <section id="team">
+    <div class="container">
+            <div class="section-header">
+        <span class="eyebrow">LEADERSHIP &amp; CORE TEAM</span>
+        <h2 data-i18n="team_heading">قيادة وفريق AXIOUX (٨ أعضاء)</h2>
+      </div>
+
+      <div class="leadership-row">
+        <div class="leader-card team-interactive-card" data-member-id="qassam" tabindex="0" role="button" aria-expanded="false">
+          <div class="leader-avatar" data-avatar-box="qassam">QH</div>
+          <div class="member-main-wrap" style="flex:1;">
+            <span class="leader-role">FOUNDER / DIRECTOR · AI AGENTS &amp; AUTOMATION</span>
+            <h3 data-i18n="m_qassam">قسّام صالح حمدان</h3>
+            <a class="member-linkedin leader-linkedin" href="https://www.linkedin.com/in/qassam-hamdan-ai/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Qassam Saleh Hamdan">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+            <p data-i18n="leader_qassam_bio">مؤسس ومدير AXIOUX — يقود الرؤية وبناء أنظمة الوكلاء الذكية والأتمتة، ويحوّل الأفكار إلى مسار عمل واضح.</p>
+            <span class="member-click-hint" data-i18n="member_view_btn">اعرف المزيد ▾</span>
+            <div class="member-inline-drawer" data-member-drawer="qassam"></div>
+          </div>
+        </div>
+
+        <div class="leader-card team-interactive-card" data-member-id="nourhan" tabindex="0" role="button" aria-expanded="false">
+          <div class="leader-avatar" data-avatar-box="nourhan">NH</div>
+          <div class="member-main-wrap" style="flex:1;">
+            <span class="leader-role">TECHNICAL DIRECTOR / CTO · AI AGENTS &amp; AUTOMATION</span>
+            <h3 data-i18n="m_nourhan">نورهان طلال حسونة</h3>
+            <a class="member-linkedin leader-linkedin" href="https://www.linkedin.com/in/nourhan-hassouna-aa11463ab" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Nourhan Talal Hassouna">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+            <p data-i18n="leader_nourhan_bio">المديرة التقنية (CTO) — تقود المعمارية والتنفيذ الهندسي لأنظمة الوكلاء الذكية والأتمتة بمعايير جودة صارمة.</p>
+            <span class="member-click-hint" data-i18n="member_view_btn">اعرف المزيد ▾</span>
+            <div class="member-inline-drawer" data-member-drawer="nourhan"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="core-team-grid" id="coreTeamGrid">
+        <div class="member-card team-interactive-card" data-member-id="abdulaziz" tabindex="0" role="button" aria-expanded="false">
+          <div class="member-avatar-circle" data-avatar-box="abdulaziz">AS</div>
+          <div class="member-main-wrap">
+            <strong data-i18n="m_abdulaziz">عبد العزيز سلامة</strong>
+            <span>Backend &amp; AI Agents</span>
+            <span class="member-click-hint" data-i18n="member_view_short">اعرف المزيد ▾</span>
+            <div class="member-inline-drawer" data-member-drawer="abdulaziz"></div>
+          </div>
+        </div>
+
+        <div class="member-card team-interactive-card" data-member-id="batool" tabindex="0" role="button" aria-expanded="false">
+          <div class="member-avatar-circle" data-avatar-box="batool">BA</div>
+          <div class="member-main-wrap">
+            <strong data-i18n="m_batool">بتول المقيّد</strong>
+            <span>UI/UX &amp; AI Agents</span>
+            <span class="member-click-hint" data-i18n="member_view_short">اعرف المزيد ▾</span>
+            <div class="member-inline-drawer" data-member-drawer="batool"></div>
+          </div>
+        </div>
+
+        <div class="member-card team-interactive-card" data-member-id="lama" tabindex="0" role="button" aria-expanded="false">
+          <div class="member-avatar-circle" data-avatar-box="lama">LM</div>
+          <div class="member-main-wrap">
+            <strong data-i18n="m_lama">لمى</strong>
+            <span>AI Solutions Architect</span>
+            <span class="member-click-hint" data-i18n="member_view_short">اعرف المزيد ▾</span>
+            <div class="member-inline-drawer" data-member-drawer="lama"></div>
+          </div>
+        </div>
+
+        <div class="member-card team-interactive-card" data-member-id="jinan" tabindex="0" role="button" aria-expanded="false">
+          <div class="member-avatar-circle" data-avatar-box="jinan">JN</div>
+          <div class="member-main-wrap">
+            <strong data-i18n="m_jinan">جنان الرَّحمَٰن الجمّال</strong>
+            <a class="member-linkedin" href="https://www.linkedin.com/in/jenan-alrahman-aljammal-9b3207417" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Jenan Al-Jammal">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+            <span>Data Analysis &amp; Backend</span>
+            <span class="member-click-hint" data-i18n="member_view_short">اعرف المزيد ▾</span>
+            <div class="member-inline-drawer" data-member-drawer="jinan"></div>
+          </div>
+        </div>
+
+        <div class="member-card team-interactive-card" data-member-id="saleh" tabindex="0" role="button" aria-expanded="false">
+          <div class="member-avatar-circle" data-avatar-box="saleh">SL</div>
+          <div class="member-main-wrap">
+            <strong data-i18n="m_saleh">صالح فروانة</strong>
+            <a class="member-linkedin" href="https://www.linkedin.com/in/sameh-fer-385a74394/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Saleh Farwana">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+            <span>Cybersecurity &amp; Backend</span>
+            <span class="member-click-hint" data-i18n="member_view_short">اعرف المزيد ▾</span>
+            <div class="member-inline-drawer" data-member-drawer="saleh"></div>
+          </div>
+        </div>
+
+        <div class="member-card team-interactive-card" data-member-id="abdelrahman" tabindex="0" role="button" aria-expanded="false">
+          <div class="member-avatar-circle" data-avatar-box="abdelrahman">AR</div>
+          <div class="member-main-wrap">
+            <strong data-i18n="m_abdelrahman">عبدالرَّحمَٰن الجديلي</strong>
+            <span>Frontend &amp; Data</span>
+            <span class="member-click-hint" data-i18n="member_view_short">اعرف المزيد ▾</span>
+            <div class="member-inline-drawer" data-member-drawer="abdelrahman"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 54px;">
+        <span class="eyebrow">HOW TO COLLABORATE</span>
+        <h3 style="font-family: var(--arabic-head); font-size: 1.35rem; margin-bottom: 10px;" data-i18n="join_heading">كيف تنضم إلينا أو تبدأ مشروعك معنا؟</h3>
+        <div class="how-to-join-grid">
+          <div class="join-step-card">
+            <span class="join-step-num">01 / CONNECT</span>
+            <h4 style="font-family:var(--arabic-head); margin-bottom:6px;" data-i18n="join_s1_t">أرسل طلبك أو فكرتك</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="join_s1_d">اختر الهدف المناسب في نموذج التواصل أدناه (مشروع جديد، طرح فكرة، أو انضمام للتدريب).</p>
+          </div>
+          <div class="join-step-card">
+            <span class="join-step-num">02 / ALIGN</span>
+            <h4 style="font-family:var(--arabic-head); margin-bottom:6px;" data-i18n="join_s2_t">جلسة تقييم وتخطيط</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="join_s2_d">نراجع المتطلبات التقنية مع قيادة الفريق ونحدد نطاق العمل والجدول الزمني بوضوح.</p>
+          </div>
+          <div class="join-step-card">
+            <span class="join-step-num">03 / BUILD</span>
+            <h4 style="font-family:var(--arabic-head); margin-bottom:6px;" data-i18n="join_s3_t">تنفيذ وتوثيق مشترك</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="join_s3_d">نبدأ البناء الفعلي ومراجعة الكود خطوة بخطوة حتى إطلاق المخرج النهائي.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">GET IN TOUCH</span>
+        <h2 data-i18n="contact_heading">تواصل معنا: لتنفيذ مشروع، طرح فكرة، أو شراكة تقنية</h2>
+        <p data-i18n="contact_sub">أرسل لنا تفاصيل مشروعك أو مقترح الشراكة وسيتواصل معك فريق AXIOUX لترتيب خطوة البداية.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="surface-card">
+          <form id="contactForm" novalidate>
+            <input type="checkbox" name="botcheck" id="botcheck" style="display:none !important;" tabindex="-1" autocomplete="off">
+
+            <div class="form-field">
+              <label for="senderName" data-i18n="lbl_c_name">الاسم الكامل أو اسم الجهة / المركز</label>
+              <input id="senderName" name="name" type="text" required minlength="2" placeholder="مثال: أ. محمد / مركز تدريب ...">
+            </div>
+            <div class="form-field">
+              <label for="senderContact" data-i18n="lbl_c_email">البريد الإلكتروني أو رقم التواصل</label>
+              <input id="senderContact" name="contact" type="text" required minlength="5" placeholder="name@example.com / +97059...">
+            </div>
+            <div class="form-field">
+              <label for="inquiryType" data-i18n="lbl_c_type">الهدف من التواصل</label>
+              <select id="inquiryType" name="inquiry_type">
+                <option value="atmind" data-i18n="opt_c_atmind">أريد تجربة AT-Mind / سجّل اهتمامي</option>
+                <option value="project" data-i18n="opt_c_proj">طلب تنفيذ مشروع تقني</option>
+                <option value="partnership" data-i18n="opt_c_part">شراكة في قسم الكورسات والتدريب</option>
+                <option value="trainer" data-i18n="opt_c_trainer">الانضمام كمدرب / مدربة في قسم الكورسات</option>
+                <option value="idea" data-i18n="opt_c_idea">اقتراح فكرة مشروع للمجتمع</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="senderMsg" data-i18n="lbl_c_msg">التفاصيل</label>
+              <textarea id="senderMsg" name="message" rows="4" required minlength="10" placeholder="اكتب لنا تفاصيل المشروع، أو شكل الشراكة المقترح..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="contactSubmitBtn" style="width: 100%;" data-i18n="btn_send_msg">إرسال الرسالة ✦</button>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 8px; text-align: center;" data-i18n="privacy_note">نستخدم بياناتك فقط للرد عليك.</p>
+            <div class="toast-msg" id="contactToast" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <div class="surface-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="eyebrow">DIRECT CHANNELS</span>
+            <h3 style="font-family: var(--arabic-head); font-size: 1.35rem; margin-bottom: 14px;" data-i18n="c_side_title">مجتمع يبني ويوثّق كل خطوة</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;" data-i18n-html="c_side_desc">
+              في <strong>AXIOUX</strong> نرحب بكل فكرة جادة، مشروع يخدم المجتمع، أو شراكة تدريبية تفتح آفاقاً جديدة للشباب.
+            </p>
+            <div style="display: grid; gap: 12px; font-size: 0.95rem;">
+              <div data-i18n-html="c_loc"><strong>المقر:</strong> غزة، فلسطين</div>
+              <div data-i18n-html="c_focus"><strong>مجالات العمل:</strong> تطوير المشاريع التقنية، الذكاء الاصطناعي، والمنصات السحابية</div>
+              <div><strong data-i18n="c_motto_lbl">شعار الهوية:</strong> <span style="font-family: var(--latin); color: var(--blue-light);">THE ART OF BEING WORTHY</span></div>
+            </div>
+
+            <div id="directChannelsWrap" style="margin-top: 18px; display: none;">
+              <div class="social-links-row" id="directSocialRow"></div>
+              <div id="waCommunityWrap" style="margin-top: 12px;"></div>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; padding: 18px; border-radius: 14px; background: rgba(6, 10, 20, 0.75); border: 1px solid var(--border-subtle); color: #F8F7F3; text-align: center;">
+            <div style="font-family: var(--serif); font-size: 1.5rem; letter-spacing: 0.2em;">AXIOUX</div>
+            <div style="font-size: 0.82rem; color: #93C5FD; margin-top: 4px;">IDEAS · DISCIPLINE · CREATIVITY · REAL IMPACT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div style="text-align: center; order: 2;">
+      <a href="#top" class="brand-link">
+        <div class="brand-emblem-mini" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
+            <path d="M18 22 C38 22, 46 42, 50 50 C46 58, 38 78, 18 78 C32 66, 38 56, 44 50 C38 44, 32 34, 18 22 Z" fill="#F8F7F3"/>
+            <path d="M82 22 C62 22, 54 42, 50 50 C54 58, 62 78, 82 78 C68 66, 62 56, 56 50 C62 44, 68 34, 82 22 Z" fill="#3B82F6"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">AXIOUX</span>
+          <span class="brand-sub">THE ART OF BEING WORTHY</span>
+        </div>
+      </a>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">© 2026 AXIOUX. All rights reserved.</p>
+    </div>
+    <div style="order: 1; display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap;">
+      <a href="https://wa.me/970592483442" class="social-link" style="color: var(--blue-light);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.08-1.13.11-1.83-.11-.42-.13-.97-.31-1.66-.61-2.92-1.26-4.82-4.21-4.97-4.4-.15-.19-1.19-1.58-1.19-3.01 0-1.43.75-2.13 1.01-2.42.27-.29.58-.36.78-.36.19 0 .39.01.56.01.18.01.42-.07.66.5.24.58.82 2.01.89 2.16.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.12.63-.07.17-.19.73-.85.92-1.14.19-.29.39-.24.66-.15.27.1 1.7.8 1.99.95.29.15.48.22.56.34.08.12.08.7-.16 1.38z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://www.instagram.com/axioux_ai_hub?hvrq=MTJtaXQwcmM0NjlhYg==" class="social-link" style="color: var(--blue-light);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        إنستغرام
+      </a>
+      <a href="https://www.linkedin.com/in/axioux-ai" class="social-link" style="color: var(--blue-light);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        لينكد إن
+      </a>
+    </div>
+    <div style="order: 3; font-family: var(--latin); font-size: 0.82rem; color: var(--text-muted);">
+      © 2026 AXIOUX. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<div class="reader-modal" id="detailReaderModal" role="dialog" aria-modal="true" aria-label="Detail Reader">
+  <div class="reader-box">
+    <button type="button" class="reader-close" id="closeReaderModalBtn" data-i18n="btn_close_modal">✕ إغلاق</button>
+    <div class="reader-body" id="readerModalBody"></div>
+  </div>
+</div>
+
+<script src="app.js?v=6"></script>
+</body>
+</html>
